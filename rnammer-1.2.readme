@@ -1,0 +1,69 @@
+
+
+RNAmmer 1.2		INSTALLATION INSTRUCTIONS
+
+
+DESCRIPTION
+
+RNAmmer 1.2 predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA  in full genome
+sequences. The method is described in detail in the following article: 
+
+RNammer: consistent annotation of rRNA genes in genomic sequences.
+Lagesen K, Hallin PF, Roedland E, Staerfeldt HH, Rognes T Ussery DW.
+Nucleic Acids Res. Apr 22, 2007.
+
+More information about the method can be found at:
+
+	http://www.cbs.dtu.dk/services/RNAmmer/
+
+DOWNLOAD
+
+The RNAmmer package  is a property of Center for Biological Sequence Analysis.
+It may be downloaded only by special agreement.  For academic users there is a
+download site at:
+
+	http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?rnammer
+
+Other users are requested to contact software@cbs.dtu.dk.
+
+PRE-INSTALLATION
+
+RNAmmer will run on the most common UNIX platforms e.g.  Linux, SunOS etc.
+Make sure that your server has a complete UNIX installation. Specifically, the
+following programs are necessary:
+
+	Perl scripting language with support for Getopt::Long module installed
+	hmmsearch	- the profile HMM search program from HMMER
+
+INSTALLATION
+
+1. Decide where you wish to keep the software. Uncompress and untar
+   the package in that location:
+
+	cat rnammer-1.2.src.tar.gz | gunzip | tar xvf -
+
+   This will produce a directory  'rnammer-1.2.'.
+
+2. Edit path specifications in the program file 'rnammer'.
+
+3. Test RNAmmer on the test sequences shipped with the package:
+
+	perl rnammer -S bac -m lsu,ssu,tsu -gff - < example/ecoli.fsa
+
+4. Move or copy the 'rnammer' script to a directory in the users' path.
+
+5. Move or copy the 'man/rnammer.1' file to a appropriate location  in your manual
+   system. 
+
+6. Enjoy ...
+
+
+PROBLEMS AND QUESTIONS
+
+In case of technical problems (bugs etc.) please contact packages@cbs.dtu.dk.
+
+Questions on the scientific aspects of the RNAmmer method  should go to 
+Peter Hallin pfh@cbs.dtu.dk.
+
+
+CBS, July 19 2007
